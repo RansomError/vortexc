@@ -7,7 +7,7 @@ Mobile-first, GitHub Pages-ready static site for the Vortex project.
 - `index.html` — page structure and content
 - `styles.css` — responsive liquid-glass neon UI
 - `app.js` — mobile menu, reveal animations, article dialog
-- `assets/` — image assets used by the site
+- `assets/` — image assets used by the site 
 
 ## Run locally
 
