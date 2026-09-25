@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050706">
+  <meta name="description" content="Vortex — a polished third-party companion site for a Roblox-focused project. Explore features, status, changelog, FAQ and a compact knowledge base.">
+  <meta name="color-scheme" content="dark">
+  <title>Vortex — Enter the Vortex</title>
+  <link rel="icon" type="image/webp" href="./vortex-icon.webp">
+  <link rel="preload" as="image" href="./vortex-icon.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas class="particle-field" id="particleField" aria-hidden="true"></canvas>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="bg-orb orb-a" aria-hidden="true"></div>
+  <div class="bg-orb orb-b" aria-hidden="true"></div>
+  <div class="bg-orb orb-c" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header glass" id="siteHeader">
+    <a class="brand magnetic" href="#top" aria-label="Vortex home">
+      <span class="brand-mark"><img src="./vortex-icon.webp" alt="Vortex icon" class="brand-icon"></span>
+      <span>VORTEX</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="primaryNav" aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="#knowledge">Knowledge</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad" data-section="hero">
+      <div class="hero-copy reveal" style="--reveal-delay:.04s">
+        <div class="eyebrow"><span class="pulse-dot"></span> VORTEX / PROJECT SITE</div>
+        <h1>Enter the <span>Vortex.</span></h1>
+        <p class="hero-lead">A clean, fast home for the Vortex project — built around Roblox culture, technical knowledge and a glassy neon interface.</p>
+        <div class="hero-actions">
+          <a class="button button-primary magnetic" href="#download">See download status <span>↘</span></a>
+          <a class="button button-ghost magnetic" href="#knowledge">Explore knowledge</a>
+        </div>
+        <div class="hero-meta">
+          <span>Mobile-first</span><span>Static-site ready</span><span>GitHub Pages friendly</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" style="--reveal-delay:.12s">
+        <div class="hero-card glass spotlight tilt-card">
+          <div class="card-topline"><span>VORTEX CORE</span><span class="status-pill">Concept</span></div>
+          <div class="hero-art-frame">
+            <img src="./vortex-icon.webp" alt="Green Vortex artwork" class="hero-icon spotlight-image">
+            <div class="art-shine" aria-hidden="true"></div>
+          </div>
+          <div class="hero-card-bottom">
+            <div><strong>Quiet glow.</strong><small>Fast navigation. Zero clutter.</small></div>
+            <span class="arrow-chip">↗</span>
+          </div>
+        </div>
+        <div class="mini-note glass spotlight"><span>03</span><p>Sections designed for touch first.</p></div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="features">
+      <div class="section-heading reveal">
+        <div><span class="section-kicker">01 / PRODUCT</span><h2>Built to feel instant.</h2></div>
+        <p>Vortex uses a restrained visual system: translucent surfaces, soft green light, strong contrast and motion that never gets in the way.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card glass spotlight reveal" style="--reveal-delay:.05s"><span class="feature-num">01</span><div class="feature-icon">✦</div><h3>Liquid Glass UI</h3><p>Frosted panels, layered depth and subtle highlights create a premium interface without heavy dependencies.</p></article>
+        <article class="feature-card glass spotlight reveal" style="--reveal-delay:.11s"><span class="feature-num">02</span><div class="feature-icon">◌</div><h3>Mobile First</h3><p>Touch-sized controls, compact spacing and a slide-down menu make the layout comfortable on phones.</p></article>
+        <article class="feature-card glass spotlight reveal" style="--reveal-delay:.17s"><span class="feature-num">03</span><div class="feature-icon">⌁</div><h3>Knowledge Hub</h3><p>Browse original, source-linked explainers on Roblox, Studio, Robux, Luau and safety topics.</p></article>
+      </div>
+    </section>
+
+    <section class="section-pad split-section" id="download">
+      <div class="download-card glass spotlight reveal">
+        <div class="section-kicker">02 / AVAILABILITY</div>
+        <div class="download-row">
+          <div>
+            <h2>Vortex for Android</h2>
+            <p>The APK is not published yet. The button is intentionally disabled until an official download destination is provided.</p>
+          </div>
+          <div class="availability-dot" aria-label="Coming soon"></div>
+        </div>
+        <button class="button button-primary button-disabled" type="button" disabled aria-disabled="true">Coming Soon</button>
+        <div class="download-foot"><span>Release channel</span><strong>Not published</strong></div>
+      </div>
+      <div class="status-card glass spotlight reveal" style="--reveal-delay:.12s" id="status">
+        <div class="section-kicker">03 / STATUS</div>
+        <div class="status-list">
+          <div class="status-item"><span>Website</span><strong><i></i> Online</strong></div>
+          <div class="status-item"><span>API</span><strong class="muted"><i></i> Placeholder</strong></div>
+          <div class="status-item"><span>Android build</span><strong class="muted"><i></i> Coming soon</strong></div>
+          <div class="status-item"><span>Documentation</span><strong><i></i> Online</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="changelog">
+      <div class="section-heading reveal"><div><span class="section-kicker">04 / CHANGELOG</span><h2>Small changes, clearly shown.</h2></div><p>A lightweight timeline is ready for real releases as the project develops.</p></div>
+      <div class="timeline glass spotlight reveal">
+        <div class="timeline-item"><div class="timeline-dot"></div><div><div class="timeline-head"><strong>v0.1 — Site foundation</strong><span>SEP 2026</span></div><p>Initial mobile-first landing page, glass UI system, knowledge base, FAQ, status cards and disabled download flow.</p></div></div>
+        <div class="timeline-item muted-item"><div class="timeline-dot"></div><div><div class="timeline-head"><strong>Next release</strong><span>UNSET</span></div><p>Reserved for the first public build notes.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="knowledge">
+      <div class="section-heading reveal"><div><span class="section-kicker">05 / KNOWLEDGE BASE</span><h2>Roblox, explained.</h2></div><p>Short, original summaries with direct links to primary or established reference sources. Nothing here is presented as official Vortex or Roblox documentation.</p></div>
+      <div class="knowledge-grid">
+        <article class="knowledge-card glass spotlight reveal" style="--reveal-delay:.04s"><div class="knowledge-image image-roblox"><img src="./roblox-community.webp" alt="Roblox-themed community scene" loading="lazy" decoding="async"></div><span class="tag">PLATFORM</span><h3>What is Roblox?</h3><p>Roblox is an online platform where people can play, create and share interactive experiences. A useful distinction is between the platform itself and individual experiences built on it.</p><button class="text-button article-open magnetic" data-article="roblox">Read article <span>→</span></button></article>
+        <article class="knowledge-card glass spotlight reveal" style="--reveal-delay:.10s"><div class="knowledge-image image-roblox"><img src="./roblox-history.webp" alt="Older Roblox-themed scene" loading="lazy" decoding="async"></div><span class="tag">HISTORY</span><h3>A short history</h3><p>The service evolved from an early physics-oriented game platform into a large user-generated ecosystem with creators, studios, communities and a virtual economy.</p><button class="text-button article-open magnetic" data-article="history">Read article <span>→</span></button></article>
+        <article class="knowledge-card glass spotlight reveal" style="--reveal-delay:.16s"><div class="knowledge-image image-roblox"><img src="./roblox-experiences.webp" alt="Roblox experiences montage" loading="lazy" decoding="async"></div><span class="tag">CREATION</span><h3>Experiences & Studio</h3><p>Creators use Roblox Studio and platform services to build places, systems and multiplayer experiences, then publish and iterate them over time.</p><button class="text-button article-open magnetic" data-article="studio">Read article <span>→</span></button></article>
+        <article class="knowledge-card glass spotlight reveal" style="--reveal-delay:.04s"><div class="icon-card"><span>R$</span></div><span class="tag">ECONOMY</span><h3>Robux</h3><p>Robux is the platform's virtual currency. Users can obtain it through supported purchase or earning pathways and spend it on eligible virtual items and experiences.</p><button class="text-button article-open magnetic" data-article="robux">Read article <span>→</span></button></article>
+        <article class="knowledge-card glass spotlight reveal" style="--reveal-delay:.10s"><div class="icon-card code"><span>&lt;/&gt;</span></div><span class="tag">LANGUAGE</span><h3>Luau & scripting</h3><p>Luau is the scripting language used across Roblox development. It extends Lua with features aimed at the needs of the platform and its developer workflow.</p><button class="text-button article-open magnetic" data-article="luau">Read article <span>→</span></button></article>
+        <article class="knowledge-card glass spotlight reveal" style="--reveal-delay:.16s"><div class="icon-card shield"><span>◈</span></div><span class="tag">SAFETY</span><h3>Executors & online safety</h3><p>An executor is generally described as software that attempts to run script code outside the normal intended development or game workflow. Using unofficial executors can create security, account and moderation risks.</p><button class="text-button article-open magnetic" data-article="safety">Read article <span>→</span></button></article>
+      </div>
+    </section>
+
+    <section class="section-pad" id="faq">
+      <div class="section-heading reveal"><div><span class="section-kicker">06 / FAQ</span><h2>Questions, answered.</h2></div><p>Tap a question to unfold it with the same soft, springy motion used throughout the site.</p></div>
+      <div class="faq-list glass reveal">
+        <div class="faq-item is-open"><button class="faq-question" type="button" aria-expanded="true"><span>Is Vortex affiliated with Roblox?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div>No. This site should be treated as a third-party project and is not affiliated with, endorsed by or sponsored by Roblox Corporation.</div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Can I download the APK now?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div>Not yet. The download control is intentionally disabled because no public APK destination has been supplied.</div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Does this site provide Roblox scripts?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div>No. The knowledge base explains technical concepts at a high level and does not provide exploit code or instructions for bypassing platform protections.</div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Where should official Roblox information come from?</span><span class="faq-plus">+</span></button><div class="faq-answer"><div>For current platform rules, developer APIs and account guidance, use Roblox's own documentation and safety resources linked inside the articles.</div></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-pad">
+    <div class="footer-brand"><img src="./vortex-icon.webp" alt="Vortex icon"><div><strong>VORTEX</strong><span>Enter the Vortex.</span></div></div>
+    <p>Third-party project. Not affiliated with Roblox Corporation. Roblox and related marks belong to their respective owners.</p>
+    <div class="footer-bottom"><span>© 2026 Vortex Project</span><a class="magnetic" href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <dialog class="article-dialog" id="articleDialog" aria-labelledby="dialogTitle" aria-modal="true">
+    <div class="dialog-shell glass spotlight" tabindex="-1">
+      <div class="dialog-bar"><span class="dialog-dot"></span><span class="dialog-dot"></span><span class="dialog-dot"></span><span class="dialog-address">VORTEX / KNOWLEDGE</span><button class="dialog-close magnetic" type="button" aria-label="Close article">×</button></div>
+      <div class="dialog-content">
+        <div class="section-kicker" id="dialogTag">ARTICLE</div>
+        <h2 id="dialogTitle">Article</h2>
+        <div id="dialogBody" class="dialog-body"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
